@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>내가 들으려고 만든 사이트</title>
+        <style>
+            body{
+                padding: 0px;
+                margin: 0px;
+                background: rgb(2,0,36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(12,12,88,1) 35%, rgba(0,76,92,1) 100%);
+            }
+            .video{
+                width: 100%;
+                height: 500px; 
+                margin: 0px auto;
+                position: relative; 
+            }
+            .text{
+                width:100%;
+                height:100px;
+                position:absolute;
+                bottom:0;
+            }
+            .select{
+                top: 20px;
+                position: fixed;
+                left: 0x;
+            }
+            button{
+                opacity: 80%;
+            }
+            video{
+                opacity: 50%;
+                width: 100%;
+            }
+            h1{
+                text-align: center;
+                color: aliceblue;
+            }
+            h2{
+                text-align: center;
+                color: azure;
+            }
+        </style>
+        
+    </head>
+    
+    <body>
+        <script>
+            function getRandomInt(min, max) {
+              min = Math.ceil(min);
+              max = Math.floor(max);
+              return Math.floor(Math.random() * (max - min)) + min; 
+            }
+            function Go(name){
+                if(name=="RANDOM"){
+                    var rand = getRandomInt(0,22);
+                    var button = document.getElementsByTagName("button");
+                    button[rand].click();
+                }else{
+                    var video = document.getElementsByTagName("video");
+                    video[0].src="video/"+name+".mp4";
+                    video[1].src="video/"+name+".mp4";
+                    video[2].src="video/"+name+".mp4";
+                }
+            }
+        </script>
+        <div class="video">
+            <video src="" controls autoplay></video>
+            <video src="" controls autoplay muted></video>
+            <video src="" controls autoplay muted></video>
+            <div class="text">
+                <h1>내가 들으려고 만든 유시온 음악 모음</h1>
+                <h2>음악을 선택해주세요</h2>
+            </div>
+            <div class="select">
+                <button onclick="Go(this.innerText)">RANDOM</button>
+                <br><br><button onclick="Go(this.innerText)">UNSTABLE</button>
+                <br><br><button onclick="Go(this.innerText)">I`M NOT GOING BACK</button>
+                <br><br><button onclick="Go(this.innerText)">I DON`T WANNA KNOW</button>
+                <br><br><button onclick="Go(this.innerText)">PIANO</button>
+                <br><br><button onclick="Go(this.innerText)">MESS</button>
+                <br><br><button onclick="Go(this.innerText)">HENZCLUB</button>
+                <br><br><button onclick="Go(this.innerText)">STILL LOVE</button>
+                <br><br><button onclick="Go(this.innerText)">YOU WANNA DIE</button>
+                <br><br><button onclick="Go(this.innerText)">GETTING HIGH</button>
+                <br><br><button onclick="Go(this.innerText)">NUMB</button>
+                <br><br><button onclick="Go(this.innerText)">IN MY POCKET</button>
+                <br><br><button onclick="Go(this.innerText)">LOOK AT ME</button>
+                <br><br><button onclick="Go(this.innerText)">JEALOUSY</button>
+                <br><br><button onclick="Go(this.innerText)">STABILITY</button>
+                <br><br><button onclick="Go(this.innerText)">I HOPE YOU WERE HAPPY</button>
+                <br><br><button onclick="Go(this.innerText)">WORTHLESS</button>
+                <br><br><button onclick="Go(this.innerText)">SPACESHIP</button>
+                <br><br><button onclick="Go(this.innerText)">STOP THINGKING</button>
+                <br><br><button onclick="Go(this.innerText)">SEE ME WINNIN</button>
+                <br><br><button onclick="Go(this.innerText)">MONEY BANZ</button>
+                <br><br><button onclick="Go(this.innerText)">ONE TAKE</button>
+                <br><br><button onclick="Go(this.innerText)">NEXT UP</button>
+                <br><br><button onclick="Go(this.innerText)">PRAY FOR YOU</button>
+                <br>
+            </div>  
+        </div>
+    </body>
+</html>
