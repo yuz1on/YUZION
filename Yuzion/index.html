@@ -56,11 +56,15 @@
                     var rand = getRandomInt(0,22);
                     var button = document.getElementsByTagName("button");
                     button[rand].click();
+                    var h2 = document.getElementsByTagName("h2");
+                    h2[0].innerHTML="Random 재생";
                 }else{
                     var video = document.getElementsByTagName("video");
                     video[0].src="video/"+name+".mp4";
                     video[1].src="video/"+name+".mp4";
                     video[2].src="video/"+name+".mp4";
+                    var h2 = document.getElementsByTagName("h2");
+                    h2[0].innerHTML=name;
                 }
             }
         </script>
